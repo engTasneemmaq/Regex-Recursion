@@ -37,7 +37,6 @@ find all images in that text and return their names and extention in an array
 required extention are jpg, jpeg and png.
 
 */
-
 function imagesSearcher(text){
     let arr = [];
     // Add your logic.
