@@ -2,15 +2,38 @@
 
 
 function division(number, dividedBy){
- let result =0;
- while(number>=dividedBy)
-{
-    number-=dividedBy;
-    result++;
+    // Write you logic here.
+    if (number == 0)
+            return 0;
+        if (dividedBy == 0)
+            return 0;
+        let neg = false;
+ 
+        if (number < 0)
+        {
+            number = -number;
+            if (dividedBy < 0)
+                dividedBy = -dividedBy;
+            else
+            neg = true;
+        }
+        else if (dividedBy < 0)
+        {
+            dividedBy = -dividedBy;
+            neg = true;
+        }
+ 
+        let quotient = 0;
+        while (number >= dividedBy)
+        {
+            number = number - dividedBy;
+            quotient++;
+        }
+ 
+        if (neg)
+            quotient = -quotient;
+        return quotient;
 }
-return result;
-}
-
 
 /* Write a function that implement Math.pow(x,n) but using recursion
 Example:
@@ -18,12 +41,12 @@ pow(2,4) = 16
 */
 
 
-function pow(x,n){
-    if(n==0)
-    return 1;
-    else
-    return x*pow(x ,n-1);
 
+function pow(x,n){
+    // Write you logic here.
+    if (n==0)
+    return 1;
+    return x*pow(x,n-1);
 }
 // console.log(pow(2,3));
 
@@ -37,12 +60,11 @@ Write a function that take n as parameter and return the nth element in the Fibo
 Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n){
-    if (n==0||n==1) 
-        return n;
-        else
-        return fibonacci(n-1)+fibonacci(n-2); 
-    }
-  
+    // Write you logic here.
+    if(n==0||n==1)
+    return n;
+    return fibonacci(n-1)+fibonacci(n-2);
+}
 
 /* Optional 
 
